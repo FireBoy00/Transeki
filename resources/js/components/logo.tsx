@@ -1,14 +1,18 @@
-const Logo = () => {
+import { Link } from '@inertiajs/react';
+
+export default function Logo() {
     return (
-        <div className="flex items-center gap-1">
+        <Link
+            className="flex cursor-pointer items-center gap-1"
+            href="/home"
+            aria-label="Home"
+        >
             <img
                 className="w-8"
                 src="/assets/logo/Transeki-logo.png"
-                alt="Logo"
+                alt="Transeki Logo"
             />
-            <span className="font-mono text-xl font-bold">Transeki</span>
-        </div>
+            <span className="text-xl font-bold text-primary/85">Transeki</span>
+        </Link>
     );
-};
-
-export default Logo;
+}

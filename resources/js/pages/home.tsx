@@ -1,4 +1,5 @@
-import NavBar from '@/components/navbar';
+import Hero from '@/components/Hero';
+import NavBar from '@/components/NavBar';
 import { Head } from '@inertiajs/react';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
         <>
             <Head title="Home" />
             <NavBar />
+            <Hero />
         </>
     );
 }

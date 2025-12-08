@@ -1,24 +1,21 @@
-import Logo from './logo';
-import { Input } from './ui/input';
+import { BellIcon } from 'lucide-react';
+import Account from './Account';
+import Logo from './Logo';
+import SearchBar from './SearchBar';
 
-const NavBar = () => {
+export default function NavBar() {
     return (
-        <nav className="grid grid-cols-3 items-center bg-gray-800 p-4">
+        <nav className="grid grid-cols-3 items-center border-b-2 border-primary/10 bg-primary/5 p-2">
             <div className="flex justify-start">
                 <Logo />
             </div>
             <div className="flex justify-center">
-                <Input
-                    type="text"
-                    placeholder="Search..."
-                    className="w-full max-w-md border-0 bg-gray-700"
-                />
+                <SearchBar />
             </div>
-            <div className="flex justify-end">
-                {/* Right side space for future content */}
+            <div className="flex items-center justify-end gap-2">
+                <BellIcon className="box-content h-6 w-6 cursor-pointer rounded-full p-2 text-primary/75 hover:bg-gray-600 hover:text-primary/90" />
+                <Account onlyAvatar username="Test User" />
             </div>
         </nav>
     );
-};
-
-export default NavBar;
+}
